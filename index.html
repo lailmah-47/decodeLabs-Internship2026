@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="header">
+    <div class="header-left">
+
+        <div class="logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                <rect x="3" y="11" width="4" height="10" rx="2"/>
+                <rect x="10" y="7" width="4" height="14" rx="2"/>
+                <rect x="17" y="3" width="4" height="18" rx="2"/>
+            </svg>
+        </div>
+
+        <div>
+            <h1 style="
+                margin:0;
+                font-size:30px;
+                font-weight:800;
+                font-family:'Poppins', Arial, sans-serif;
+                color:#2563eb;
+                letter-spacing:1px;
+                text-transform:uppercase;
+                text-shadow:1px 2px 6px rgba(37,99,235,0.25);
+            ">
+                Decode Labs
+            </h1>
+
+            <span style="
+                font-size:12px;
+                color:#6b7280;
+                letter-spacing:3px;
+                text-transform:uppercase;
+                font-weight:600;
+            ">
+                Analytics Dashboard
+            </span>
+        </div>
+
+    </div>
+
+    <div class="header-right">
+
+        <button class="icon-btn" id="notif-btn" title="Notifications">
+            🔔
+        </button>
+
+        <button class="icon-btn" id="theme-btn" title="Toggle Theme">
+            <svg width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+        </button>
+
+        <div class="avatar">JD</div>
+
+    </div>
+</header>
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Top Section: Key Metrics -->
+            <section class="metrics-section">
+                <h2 class="section-title">Key Metrics</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card" data-metric="revenue">
+                        <div class="metric-header">
+                            <span class="metric-label">Total Revenue</span>
+                            <span class="metric-icon">💰</span>
+                        </div>
+                        <div class="metric-value">$124,560</div>
+                        <div class="metric-change positive">↑ 12.5% vs last month</div>
+                    </div>
+
+                    <div class="metric-card" data-metric="users">
+                        <div class="metric-header">
+                            <span class="metric-label">Active Users</span>
+                            <span class="metric-icon">👥</span>
+                        </div>
+                        <div class="metric-value">8,342</div>
+                        <div class="metric-change positive">↑ 8.2% vs last month</div>
+                    </div>
+
+                    <div class="metric-card" data-metric="conversion">
+                        <div class="metric-header">
+                            <span class="metric-label">Conversion Rate</span>
+                            <span class="metric-icon">📈</span>
+                        </div>
+                        <div class="metric-value">3.24%</div>
+                        <div class="metric-change negative">↓ 0.5% vs last month</div>
+                    </div>
+
+                    <div class="metric-card" data-metric="aov">
+                        <div class="metric-header">
+                            <span class="metric-label">Avg. Order Value</span>
+                            <span class="metric-icon">🛒</span>
+                        </div>
+                        <div class="metric-value">$89.50</div>
+                        <div class="metric-change positive">↑ 3.1% vs last month</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-section">
+                <h2 class="section-title">Performance</h2>
+                <div class="charts-grid">
+                    <!-- Revenue Chart -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Revenue Trend</h3>
+                            <select class="time-select" id="revenue-select">
+                                <option value="7">7 days</option>
+                                <option value="30" selected>30 days</option>
+                                <option value="90">90 days</option>
+                            </select>
+                        </div>
+                        <div class="chart-container">
+                            <div class="bar-chart" id="revenue-chart"></div>
+                        </div>
+                    </div>
+
+                    <!-- Conversion Funnel -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Conversion Funnel</h3>
+                            <span class="info-icon" title="User journey stages">ℹ️</span>
+                        </div>
+                        <div class="funnel-chart">
+                            <div class="funnel-stage">
+                                <div class="funnel-bar" style="width: 100%;">
+                                    <span class="funnel-label">Visitors</span>
+                                    <span class="funnel-value">45,230</span>
+                                </div>
+                            </div>
+                            <div class="funnel-stage">
+                                <div class="funnel-bar" style="width: 75%;">
+                                    <span class="funnel-label">Sign-ups</span>
+                                    <span class="funnel-value">12,456</span>
+                                </div>
+                            </div>
+                            <div class="funnel-stage">
+                                <div class="funnel-bar" style="width: 50%;">
+                                    <span class="funnel-label">Trial Started</span>
+                                    <span class="funnel-value">3,421</span>
+                                </div>
+                            </div>
+                            <div class="funnel-stage">
+                                <div class="funnel-bar" style="width: 25%;">
+                                    <span class="funnel-label">Purchased</span>
+                                    <span class="funnel-value">1,247</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom Section: Activity & Tasks -->
+            <section class="activity-section">
+                <h2 class="section-title">Activities</h2>
+                <div class="activity-grid">
+                    <!-- Activity Feed -->
+                    <div class="activity-card">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-avatar">👤</div>
+                                <div class="activity-content">
+                                    <p class="activity-text">New order from <strong>Sarah Johnson</strong></p>
+                                    <span class="activity-time">2 minutes ago</span>
+                                </div>
+                                <span class="activity-badge">Order</span>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-avatar">💬</div>
+                                <div class="activity-content">
+                                    <p class="activity-text">Customer support ticket resolved</p>
+                                    <span class="activity-time">15 minutes ago</span>
+                                </div>
+                                <span class="activity-badge resolved">Resolved</span>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-avatar">📝</div>
+                                <div class="activity-content">
+                                    <p class="activity-text">Report generated: <strong>Monthly Analytics</strong></p>
+                                    <span class="activity-time">1 hour ago</span>
+                                </div>
+                                <span class="activity-badge">Report</span>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-avatar">✅</div>
+                                <div class="activity-content">
+                                    <p class="activity-text">Goal achieved: <strong>1000 daily active users</strong></p>
+                                    <span class="activity-time">3 hours ago</span>
+                                </div>
+                                <span class="activity-badge success">Success</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Tasks -->
+                    <div class="activity-card">
+                        <div class="tasks-header">
+                            <h3>Quick Tasks</h3>
+                            <button class="add-btn" id="add-task-btn" title="Add a new task">+</button>
+                        </div>
+                        <div class="tasks-list">
+                            <div class="task-item">
+                                <input type="checkbox" id="task-1" class="task-checkbox">
+                                <label for="task-1" class="task-label">Review Q3 marketing strategy</label>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" id="task-2" class="task-checkbox" checked>
+                                <label for="task-2" class="task-label">Update customer database</label>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" id="task-3" class="task-checkbox">
+                                <label for="task-3" class="task-label">Schedule team meeting</label>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" id="task-4" class="task-checkbox">
+                                <label for="task-4" class="task-label">Prepare budget report</label>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" id="task-5" class="task-checkbox">
+                                <label for="task-5" class="task-label">Respond to investor emails</label>
+                            </div>
+                        </div>
+                        <div class="task-input-container" id="task-input-container" style="display: none;">
+                            <input type="text" class="task-input" id="task-input" placeholder="Add a new task...">
+                            <button class="submit-btn" id="submit-task-btn">Add</button>
+                            <button class="cancel-btn" id="cancel-task-btn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
