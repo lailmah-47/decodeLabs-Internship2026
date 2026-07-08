@@ -43,8 +43,9 @@ A modern, mobile-first analytics dashboard built with **HTML, CSS, and JavaScrip
 
 ---
 
-About Me
-Lailmah Bokhari
+## About Me
+
+***Lailmah Bokhari***
 
 I am a Computer Science student at COMSATS University Islamabad, Lahore Campus.
 
