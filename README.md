@@ -42,3 +42,17 @@ A modern, mobile-first analytics dashboard built with **HTML, CSS, and JavaScrip
 - JavaScript (ES6)
 
 ---
+
+About Me
+Lailmah Bokhari
+
+I am a Computer Science student at COMSATS University Islamabad, Lahore Campus.
+
+Currently, I am in my 7th semester of the Bachelor of Computer Science (BCS) program.
+
+During my internship at Decode Labs, I am working as a Full Stack Developer Intern, focusing on improving my development skills, building real-world applications, and gaining professional software development experience.
+⭐ This repository will be updated regularly as I complete more projects during my Decode Labs internship.
+
+---
+
+DecodeLabs Internship Program — Batch 2026 🌐 www.decodelabs.tech | ✉️ decodelabs.tech@gmail.com
